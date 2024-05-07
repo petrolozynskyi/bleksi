@@ -5,7 +5,7 @@ import checker from 'vite-plugin-checker'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/dribbble_clone',
+  base: '/bleksi',
   plugins: [checker({ typescript: false }),
     react(),
      svgr()],
