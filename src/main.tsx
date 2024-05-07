@@ -1,17 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import App from './App.tsx'
 import './index.css'
-import App from './App'
-import { store } from './state/store'
-import { Provider } from 'react-redux'
+import { Theme } from '@radix-ui/themes'
+import '@radix-ui/themes/styles.css';
 
-// As of React 18
-const root = ReactDOM.createRoot(document.getElementById('root'))
-
-root.render(
-  <div className='relative overflow-hidden'>
-    <Provider store={store}>
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <Theme>
       <App />
-    </Provider>
-  </div>
+    </Theme>
+  </React.StrictMode>,
 )

@@ -2,167 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  overflow-x:hidden 
-} 
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 222.2 84% 4.9%;
 
-@font-face {
-    font-family: 'Mona-Sans';
-    src: url(/fonts/Mona-Sans.ttf);
-  }
+      --card: 0 0% 100%;
+      --card-foreground: 222.2 84% 4.9%;
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    font-size: 100%;
-    vertical-align: baseline;
-    font-family: 'Mona-Sans' , 'sans-serif'
-}
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 84% 4.9%;
 
-#html {
-    background-color:  #f8f7f4;
-    font-family: 'Mona-Sans';
-    overflow-x: hidden;
-    box-sizing: border-box;
- }
+      --primary: 222.2 47.4% 11.2%;
+      --primary-foreground: 210 40% 98%;
 
-button{
-  cursor:pointer
-}
+      --secondary: 210 40% 96.1%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
 
-.axax2{
-    color: black;
-    font-size: 14px;
-    font-weight: 600;     
-    transition: color 200ms ease;
-    margin: 0 16px
-}
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
 
-.axax2:hover {
-     color: #3d3d4e
-}
+      --accent: 210 40% 96.1%;
+      --accent-foreground: 222.2 47.4% 11.2%;
 
-.before{}
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
 
-.before::before{
-  content: '';
-  position: absolute;
-  top: -40px;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  cursor:pointer
-}
+      --border: 214.3 31.8% 91.4%;
+      --input: 214.3 31.8% 91.4%;
+      --ring: 222.2 84% 4.9%;
 
-.axax4{
-  background-image: url(/dribble.svg);
-  height: 27px;
-  width: 96px;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
-.axax:hover {
-    animation-play-state: paused !important
-
-}
-
-.axax > li:nth-child(3)::after {
-    content: '';
-    display: inline-block;
-
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='9' viewBox='0 0 10 9' fill='none'%3E%3Cpath d='M8.5 2.5L4.92667 6.073C4.90348 6.09622 4.87594 6.11464 4.84563 6.12721C4.81531 6.13978 4.78282 6.14625 4.75 6.14625C4.71718 6.14625 4.68469 6.13978 4.65437 6.12721C4.62406 6.11464 4.59652 6.09622 4.57333 6.073L1 2.5' stroke='%230D0C22' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    margin-left: -10px;
-  }
-
-  .axax3::after{
-    content: '';
-    display: inline-block;
-    width: 9px;
-    height: 8px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='9' viewBox='0 0 10 9' fill='none'%3E%3Cpath d='M8.5 2.5L4.92667 6.073C4.90348 6.09622 4.87594 6.11464 4.84563 6.12721C4.81531 6.13978 4.78282 6.14625 4.75 6.14625C4.71718 6.14625 4.68469 6.13978 4.65437 6.12721C4.62406 6.11464 4.59652 6.09622 4.57333 6.073L1 2.5' stroke='%230D0C22' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    margin-left: 6px;
-    margin-top: 7px
-  }
-
-  @keyframes petushara {
-    0% {
-      background-color: #ffda79;
+      --radius: 0.5rem;
     }
-    25% {
-      background-color: #ffabe7;
-    }
-    50% {
-      background-color: #d2bcf3;;
-    }
-    75% {
-      background-color: #edf3d8;
-    }
-    100% {
-     background-color: #ffda79;
+
+    .dark {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
     }
   }
 
-  #box {
-    border-radius: 99999999999px;
-    animation: petushara 32s linear infinite;
+
+
+  .btn {
+    border: none;
+    outline: none;
+    padding: 2px;
+    background-color: #f1f1f1;
+    cursor: pointer;
   }
-  
 
-  .hover-trigger .hover-target {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0.5s, opacity 0.5s;
+  /* Style the active class (and buttons on mouse-over) */
+.active, .btn:hover {
+  background-color: black;
+  color: white;
 }
-
-.hover-trigger:hover .hover-target {
-  visibility: visible;
-    animation-name: bounce-out-down;
-    animation-duration: 0.3s;    
-    opacity: 1;
-}
-
-
-
-@keyframes bounce-out-down {
-  0% { 
-    opacity: 0.33;
-    transform: translateY(-3px);
-    
-   }
-  50% {
-    opacity: 0.66;
-    transform: translateY(2px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-
-  /* .slider-top {
-
-    animation: marquee-mobile 12s infinite linear;
-    cursor: pointer
-    }
-    
-     @keyframes marquee-mobile {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-      
-} 
- */
-
